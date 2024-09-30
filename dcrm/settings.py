@@ -55,7 +55,9 @@ ROOT_URLCONF = 'dcrm.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,12 +78,12 @@ WSGI_APPLICATION = 'dcrm.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': 'crm-website',
-        # 'USER': 'postgres',
-        # 'PASSWORD': 'admin123',
-        # 'HOST': 'localhost',
-        # 'PORT': '5432', 
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'crm-website',
+        'USER': 'postgres',
+        'PASSWORD': 'admin123',
+        'HOST': 'localhost',
+        'PORT': '5432', 
     }
 }
 
